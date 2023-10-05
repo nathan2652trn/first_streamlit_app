@@ -44,7 +44,7 @@ except URLError as e:
   streamlit.error()
 
 # Calls to snowflake to load list
-streamlit.text('View our fruit list - add your favorites:') 
+streamlit.header('View our fruit list - add your favorites:') 
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
         my_cur.execute("select * from fruit_load_list")
