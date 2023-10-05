@@ -49,3 +49,7 @@ my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
 my_data_rows = my_cur.fetchall()
 streamlit.header("Data pull from Snowflake:")
 streamlit.dataframe(my_data_rows)
+
+add_my_fruit = streamlit.text_input('What fruit would you like to add?','Jackfruit')
+streamlit.write('The user entered ', fruit_choice)
+
